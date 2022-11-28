@@ -1,0 +1,19 @@
+apiVersion: apps.alessandroargentieri.com/v1
+kind: Dummy
+metadata:
+  labels:
+    app.kubernetes.io/name: dummy
+    app.kubernetes.io/instance: dummy-sample
+    app.kubernetes.io/part-of: dummy-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: dummy-operator
+  name: dummy-sample-2
+spec:
+  dummyDeployment:
+    image: nginx
+    replicas: 3
+  dummyService:
+    type: NodePort
+    port: 80
+    targetPort: 80
+    nodePort: 31000

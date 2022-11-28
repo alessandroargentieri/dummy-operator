@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-operator-controller-deployment
+  namespace: operators
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-operator-controller
+  template:
+    metadata:
+      labels:
+        app: dummy-operator-controller
+    spec:
+      containers:
+        - name: dummy-operator-controller
+          image: alessandroargentieri/dummy-operator:v0.0.2
+          imagePullPolicy: Always
+      serviceAccountName: dummy-operator-svc

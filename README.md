@@ -30,7 +30,7 @@ make install
 ```
 
 You must have a k8s cluster available with kubeconfig configured.
-Check for OLM (https://sdk.operatorframework.io/docs/olm-integration/tutorial-bundle/#enabling-olm):
+Check for OLM (Operator Lifecycle management) (https://sdk.operatorframework.io/docs/olm-integration/tutorial-bundle/#enabling-olm):
 ```bash
 operator-sdk olm status
 operator-sdk olm install

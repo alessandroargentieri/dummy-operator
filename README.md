@@ -40,7 +40,7 @@ Create the operator folder and initialize the operator (the `--plugins=go/v4-alp
 ```bash
 mkdir dummy-operator
 cd dummy-operator
-operator-sdk init --plugins=go/v4-alpha --domain alessandroargentieri.com --repo github.com/alessandroargentieri/dummy-operator
+operator-sdk init --plugins=go/v4 --domain alessandroargentieri.com --repo github.com/alessandroargentieri/dummy-operator
 ```
 
 Initialize the API:
